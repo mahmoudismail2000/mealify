@@ -1,0 +1,1278 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*                        Navbar                         */
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgb(212, 211, 211);
+    
+    
+}
+.navbar .container1{
+    width: 80%;
+    margin: auto; 
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    
+}
+.navbar .navs{
+    width: 60%;
+
+}
+.navbar .logo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navbar .logo h1{
+    position: relative;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar .logo h1::after{
+    content: " ";
+    position: absolute;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.navbar .navs ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+.navbar .navs ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+.navs ul li a:after{
+    margin-top: 4px;
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    top: 100%;
+    left: 0px;
+    background-color: #CE1212;
+    transition: width .4s;
+}
+.navs ul li a:hover:after{ 
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.navbar .navs ul li{
+    padding: 25px 15px;
+}
+
+
+
+.navbar .moon{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.navbar .moon i{
+    font-size: 30px;
+
+}
+
+
+
+
+
+/*                        Home                         */
+
+
+.home {
+    background-color:#EEEEEE;
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+
+    
+    
+}
+.home .caption{
+    display: flex;
+    align-items: center;
+
+}
+.home .caption .btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    
+    
+
+}
+.home .caption .btn button{
+    width: 120px;
+    margin-right: 40px;
+    padding: 12px;
+    border-radius: 50px;
+    border-top-left-radius: 0%;
+    background-color: #D21212;
+    border: 0;
+}
+
+.home .caption .btn button:hover{
+    background-color: #E61414;
+}
+
+.home .imgFood{
+    width: 50%;
+    position: relative;
+    
+    
+}
+.home .container .imgFood img{
+    width: 100%;
+    padding: 15px;
+    filter: drop-shadow(8px 8px 10px gray);
+
+}
+
+.home .container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.home .container .caption .inCaption h2{
+    color: #37373F;
+    font-size: 65px;
+    font-weight: 700;
+    font-family:'Amatic SC', sans-serif;
+}
+
+.home .container .caption .inCaption p{
+    color: #4F4F5A;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.home .container .caption .btn a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+.home .container .caption .btn button a{
+    color: white;
+}
+.home .container .caption .inCaption .iconAll .iconPlay{
+    width: 40px;
+    padding: 13px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+.home .container img:hover {
+    animation-name: anima ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.caption .inCaption{
+    width: 100%;
+
+}
+
+
+
+.iconAll{
+    position: relative;
+}
+.iconAll::before{
+    content: " ";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient( to right,  #E61414 0 50%, transparent 50% 100% );
+    position: absolute;
+    top: -4px;
+    left: -4;
+    z-index: 1;
+}
+.iconPlay{
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes anima {
+    0%{
+        transform: rotate(1deg) translate(1px,1px);
+
+    }
+    10%{
+        transform: rotate(-1deg) translate(2px,1px);
+
+    }
+    20%{
+        transform: rotate(2deg) translate(3px,2px);
+
+    }
+    35%{
+        transform: rotate(-1deg) translate(2px,-1px);
+
+    }
+    40%{
+        transform: rotate(2deg) translate(2px,2px);
+
+    }
+    50%{
+        transform: rotate(-1deg) translate(2px,1px);
+
+    }
+    60%{
+        transform: rotate(2deg) translate(-4px,-3px);
+
+    }
+    70%{
+        transform:rotate(1deg) translate(3px,-1px);
+
+    }
+    80%{
+        transform: rotate(1deg) translate(-4px,2px);
+
+    }
+    100%{
+        transform: rotate(2deg) translate(2px,-1px);
+
+    }
+}
+
+
+
+
+
+
+/*                        Chefs                          */
+
+
+
+.chefs{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.chefs .container2{
+    width: 80%;
+    
+    text-align: center;
+}
+.chefs .container2 .content{
+  
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.chefs .container2 .content .conthov{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: left 1s ;
+    
+
+}
+.con{
+    width: 32%;
+    
+}
+.chefs .container2 .content .contphoto{
+    width: 100%;
+    box-shadow: 1px 2px 10px 2px rgb(209, 209, 209);
+    border-radius: 10px;
+    position: relative;
+    transition: transform 1s ;
+    overflow: hidden;
+    
+}
+.chefs .container2 .content .contphoto img{
+    width: 100%;
+    border-radius: 10px; 
+}
+
+.chefs .container2 .content .con .contphoto::after{
+    content: " ";
+    position: absolute;
+    background-image: url('img/img/team-shape.svg');
+    width: 100%;
+    height: 50px;
+    right: 0;
+    left: 0;
+    bottom: 6.2rem;
+    
+}
+
+
+
+
+
+.chefs .container2 span{
+    font-size: 14px;
+    color:#7F7F90;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.chefs .container2 p span{
+    color: #D21212;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+}
+.chefs .container2  p {
+    color: #212529;
+    font-size: 50px;
+    font-weight: 400;
+    font-family:'Amatic SC', sans-serif;
+}
+.chefs .container2 .content .contphoto h3, span, p{
+    font-family:'Open Sans', sans-serif;
+}
+.chefs .container2 .content .contphoto p{
+    font-family:'Open Sans', sans-serif;
+    font-size: 14px;
+    color:#7F7F90;
+}
+
+
+.chefs .container2 .icons3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+    width: 50px;
+    background-color:antiquewhite;
+    opacity: .5;
+    margin-right: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;    
+}
+
+.chefs .container2 .visual{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 10px;
+    width: 50px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    border-radius: 100%;
+    opacity: .5;
+    position: relative;
+    
+   
+}
+
+.chefs .container2 .content .contphoto:hover{
+    transform: scale(1.1);
+}
+
+.chefs .container2 .content .contphoto:hover .conthov {
+    left: 0;
+}
+
+.chefs .container2 .content .contphoto h3{
+    color: black;
+}
+
+
+
+
+
+/*                        Gallery                         */
+
+
+
+
+
+.gallery{
+    margin-top: 60px;
+    background-color:#EEEEEE;
+}
+.gallery .container3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    
+}
+.gallery .container3 .boxcontainer{
+    width: 100%;
+    margin: 20px auto;
+    columns: 3;
+    column-gap: 40px;
+}
+.gallery .container3 .boxcontainer .box{
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.box img{
+    max-width: 100%;
+    
+    
+}
+.box .boxcaption{
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    position: absolute;
+    transition: top 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+.box:hover .boxcaption{
+    top: 0;
+}
+
+
+.container3 span{
+    font-size: 14px;
+    color:#7F7F90;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.container3 p span{
+    color: #CE1212;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: 'Amatic SC', sans-serif;
+}
+.container3 > p {
+    color: #212529;
+    font-size: 50px;
+    font-weight: 400;
+    font-family:'Amatic SC', sans-serif;
+}
+
+
+
+/*                        Contacts                         */
+
+
+.contact{
+    background-color: #ffffff;
+    margin-top: 60px;
+}
+.container4{
+    width: 80%;
+    margin: auto;
+
+    text-align: center;
+    
+}
+.container4 .googlemap iframe{
+    width: 100%;
+}
+.container4 span{
+    color: #7D7D7D;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container4 p {
+    color: #212529;
+    font-size: 50px;
+    font-family:'Amatic SC', sans-serif;
+    margin-bottom: 20px;
+}
+.container4 p span {
+    color:#CE1212;
+    font-size: 50px;
+    font-family:'Amatic SC', sans-serif;
+}
+
+
+.information{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+}
+.inf{
+    background-color:#F5F5F5;
+    width: 49.4%;
+    margin-bottom: 15px;
+    display: flex;
+    
+    
+}
+
+.inf .addicon, .emailicon, .callicon, .hoursicon{
+    width:50px;
+    height: 50px;
+    background-color: #D21212;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.inf .addcaption, .emailcaption, .callcaption, .hourscaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   
+}
+.inf i{
+    color: white;
+}
+
+.inf h3{
+    color: #7D7D7D;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.inf p{
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+.inf p span{
+    color: #212529;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.information2{
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(228, 228, 228);
+    border: 0;
+    
+
+}
+
+ .contentarea{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.information2 form{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.contentarea input{
+    width: 49.5%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.information2 form input ,textarea{
+    padding: 15px;
+    margin-bottom: 10px;
+    border:2px solid#E8E3E3;
+}
+
+.information2 textarea{
+    resize: none;
+    margin-bottom: 40px;
+}
+
+.information2 a{
+    width: 150px;
+    margin: auto;
+    
+}
+.information2 a button{
+    background-color: #CE1212;
+    padding: 15px 30px;
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    border: 0;
+
+}
+.information2 a button:hover{
+    background-color: #E61414;
+    
+
+}
+.information2 form input:focus{
+    outline:2px solid #D21212;
+    border: 0;
+}
+.information2 form textarea:focus{
+    outline:2px solid #D21212;
+    border: 0;
+}
+
+
+/*        Social Media       */
+.socialmedia{
+    background-color: black;
+    margin-top: 50px;
+    height: 350px;
+}
+.container5{
+    width: 80%;
+    
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.mediaparent{
+
+    width: 24%;
+    
+}
+.mediachild{
+
+    width: 100%;
+    padding-top: 30px;
+
+}
+
+.mediachild img{
+    width: 40px;
+    height: 40px;
+
+}
+.mediachild2{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.mediachild3{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.socialmedia .mediaparent .mediachild3 h2{
+    position: relative;
+    font-size: 30px;
+}
+
+.socialmedia .mediaparent .mediachild3 h2::after{
+    content: " ";
+    position: absolute;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.mediachild > h3{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18.72px;
+}
+.mediachild .line{
+    width: 100%;
+    height: 1.5px;
+    background-color: #7F7F90;
+}
+.mediachild .mediaicons i{
+    font-size: 25px;
+    color: white;
+}
+.mediachild .mediaicons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.mediachild h2 , p ,h3 ,ul li{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.subscribe{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    row-gap: 12px;
+
+}
+ul {
+    list-style: none;
+}
+
+.subemail{
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+
+.subscribe .links .links1 ul a:hover li{
+    background-color: rgba(109, 108, 108, 0.5);
+    margin-left: 10px;
+
+}
+
+
+.subemail .subemail1{
+    width: 79.5%;
+}
+.subemail .subemail2{
+    width: 19.5%;   
+}
+
+
+
+.subemail .subemail1 input {
+    width: 100%;
+    padding: 10px;
+}
+
+.subemail .subemail2 button{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color:#CE1212;
+}  
+
+.subemail .subemail2 button:hover{
+    
+    background-color:#E61414;
+}  
+
+.links{
+    display: flex;
+    margin-bottom: 40px;
+    
+}
+
+.links ul li{
+    margin: 8px 0px;
+    padding: 5px;
+    transition: all .5s;
+}
+
+.links .links1{
+    width: 50%;
+
+}
+
+
+.touch{
+    width: 24%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.touchicons{
+    display: flex;
+    margin-top: 15px;
+
+}
+
+.touchicons .iconsi i{
+    font-size: 25px;
+    color: #D21212;
+
+}
+
+
+.touchicons .iconsp {
+    margin-left: 20px;
+
+}
+
+
+
+
+
+
+@media all and (max-width:575px){
+    body{
+        width: 100%;
+    }
+    
+    
+    .navbar .navs{
+        display: none;
+        
+    }
+    .navbar .container1 .moon{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+
+/*    media home */
+    .home{
+        height: 110vh;
+    }
+    .container{
+        width: 100%;  
+        display: flex;
+        flex-direction: column-reverse;  
+        
+    }
+    
+    .container .imgFood{
+        
+        width: 100%;   
+    }
+    
+    
+    .inCaption{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+/*    media chefs */
+    .container2{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    
+    .container2 .content{
+        display: flex;
+        flex-direction: column;
+        
+
+
+    }
+    .container2 .content .con{
+        width: 100%;
+    
+        margin-bottom: 40px;  
+    }
+
+    .container2 .content .con .contphoto{
+        width: 100%;
+    }
+/*    media gallery */
+    .container3{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .boxcontainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+/*    media contacts */
+    .container4{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .container4 .information {
+        display: flex;
+        flex-direction: column;
+    }
+    .container4 .information .inf{
+        width: 100%;
+    }
+       
+/*    media social */
+
+    
+    .socialmedia{
+        height: auto;
+    }
+
+    .container5{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .container5 .mediaparent , .subscribe , .touch{
+        width: 100%;
+    }
+    
+    .subscribe .subemail{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .subscribe .subemail .subemail2{
+        width: 100%;
+        margin-top: 5px;
+    }
+    .subscribe .subemail .subemail1{
+        width: 100%;
+    }
+    
+    
+}
+    
+    
+
+
+
+
+
+@media all and (min-width:576px) and (max-width:767px){
+    body{
+        width: 100%;
+    }
+    .navbar .navs{
+        display: none;
+        
+    }
+    
+    .navbar .container1 .moon{
+        display: flex;
+        justify-content: space-around;
+       
+        
+    }
+
+/*    media home */
+    .home{
+        height: 110vh;
+    }
+    .container{
+        width: 100%;  
+        display: flex;
+        flex-direction: column-reverse;  
+        
+    }
+    
+    .container .imgFood{
+        
+        width: 100%;   
+    }
+    
+    
+    .inCaption{
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+/*    media chefs */
+    .container2{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container2 .content{
+        display: flex;
+        flex-direction: column;
+        
+
+
+    }
+    .container2 .content .con{
+        width: 100%;
+    
+        margin-bottom: 40px;  
+    }
+
+    .container2 .content .con .contphoto{
+        width: 100%;
+    }
+/*    media gallery */
+    .container3{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .boxcontainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+/*    media contacts */
+    .container4{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .container4 .information {
+        display: flex;
+        flex-direction: column;
+    }
+    .container4 .information .inf{
+        width: 100%;
+    }
+       
+/*    media social */
+
+    
+    .socialmedia{
+        height: auto;
+    }
+
+    .container5{
+        display: flex;
+        flex-direction: column;
+    }
+    .container5 .mediaparent , .subscribe , .touch{
+        width: 100%;
+    }
+    
+    
+}
+
+@media all and (min-width:768px) and (max-width:991px){
+    body{
+        width: 100%;
+    }
+    .navbar .navs{
+        display: none;
+        
+    }
+    
+    .navbar .container1 .moon{
+        display: flex;
+        justify-content: space-around;
+       
+        
+    }
+
+/*    media home */
+    .home{
+        height: 140vh;
+    }
+    .container{
+        width: 100%;  
+        display: flex;
+        flex-direction: column-reverse;  
+        
+    }
+    
+    .container .imgFood{
+        
+        width: 90%;   
+    }
+    
+    
+    .caption{
+        width: 60%;
+        margin-top: 20px;
+        display: flex;
+        
+        
+    }
+    .inCaption{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .inCaption .btn{
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+
+/*    media chefs */
+    .container2{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container2 .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+
+
+    }
+    .container2 .content .con{
+        width: 48%;
+    
+        margin-bottom: 40px;  
+    }
+
+    .container2 .content .con .contphoto{
+        width: 100%;
+    }
+
+
+/*    media gallery */
+    .container3{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gallery .container3 .boxcontainer{
+        width: 100%;
+        margin: 20px auto;
+        columns: 2;
+        column-gap: 40px;
+    }
+    .gallery .container3 .boxcontainer .box{
+        width: 100%;
+        margin-bottom: 20px;
+        break-inside: avoid;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
+    
+/*    media contacts */
+    .container4{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .container4 .information {
+        display: flex;
+    
+    }
+    .container4 .information .inf{
+        width: 48%;
+    }
+       
+/*    media social */
+    .socialmedia{
+        height: auto;
+    }
+
+    .container5{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .container5 .mediaparent{
+        width: 50%;
+        order: 1;
+    }
+    .container5 .subscribe{
+        width: 100%;
+        order: 3;
+        height: 400px;
+    }
+    .container5 .touch{
+        width: 50%;
+        order: 2;
+        position: absolute;
+        right: 0;
+    }
+    
+       
+    
+}
+
+@media all and (min-width:992px) and (max-width:1199px){
+    .socialmedia{
+        height: auto;
+    }
+
+    .container5{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .container5 .mediaparent{
+        width: 50%;
+        order: 1;
+    }
+    .container5 .subscribe{
+        width: 100%;
+        order: 3;
+        height: 400px;
+    }
+    .container5 .touch{
+        width: 50%;
+        order: 2;
+        position: absolute;
+        right: 0;
+    }
+}
+@media all and (min-width:1200px){
+    .barsmoon{
+        display: none;
+    }
+}
